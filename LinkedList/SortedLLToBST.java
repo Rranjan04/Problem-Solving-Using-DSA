@@ -16,7 +16,7 @@ public class SortedLLToBST {
 		ll.display();
 	}
 	public static TreeNode convert(Node head){
-		if(head==null||head.next==null) return head;
+		if(head==null||head.next==null) return new TreeNode(head.data);
 		Node slow = head;
 		Node fast = head;
 		Node tail = slow;
