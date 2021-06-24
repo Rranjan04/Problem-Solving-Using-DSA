@@ -6,7 +6,27 @@ public class DeletingNodesInDoublyLinkedList {
 		
 	}
 	static DLL delete(DLL node, int x){
-		if(node==null) return null;
-		while(node!=null && node.)
+		{
+		// Your code here
+		 DLL temp = node;
+			if(node==null) return null;
+			while(node!=null && x>1){
+				node = node.next;
+				x--;
+			}
+			if(node!=null && node.next!=null && node.prev!=null){
+				DLL t = node.prev;
+				node.prev.next = node.next;
+				node.next.prev = t;
+			}
+			else if(node.prev==null){
+				temp = node.next;
+				node.next=null;
+			}
+			else if(node.next==null){
+				node.prev.next = null;
+			}
+			return temp;
+
 	}
-}
+}}
