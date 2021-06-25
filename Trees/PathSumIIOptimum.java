@@ -20,7 +20,7 @@ public class PathSumIIOptimum {
 		if(map.containsKey(currSum-sum)){
 			count+= map.get(currSum-sum);
 		}
-		map.put(currSum, map.getOrDefault(currSum, 0)+1);//increase the frequency OR add
+		map.put(currSum, map.getOrDefault(currSum, 1)+1);//increase the frequency OR add
 		findPathSum(root.left, currSum, sum, map);
 		findPathSum(root.right, currSum, sum, map);
 		map.put(currSum, map.get(currSum)-1);//remove it back on the go
