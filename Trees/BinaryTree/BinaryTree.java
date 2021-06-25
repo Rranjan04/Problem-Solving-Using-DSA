@@ -2,8 +2,13 @@ package Trees.BinaryTree;
 
 
 public class BinaryTree {
-	TreeNode root;
-	public TreeNode insert(int[] arr,TreeNode root, int i){
+	public TreeNode root;
+	public TreeNode create(int[] arr){
+		if(arr.length==0) return null;
+		root = new TreeNode(arr[0]);
+		return insert(arr, root, 0);
+	}
+	private TreeNode insert(int[] arr,TreeNode root, int i){
 		// level-wise
 		if(i<arr.length){
 			TreeNode node = new TreeNode(arr[i]);
