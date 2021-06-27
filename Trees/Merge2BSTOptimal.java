@@ -13,7 +13,6 @@ public class Merge2BSTOptimal {
 		tree2.root.right = new TreeNode(6);
 		tree2.root.left = new TreeNode(4);
 		tree1.root = merge(tree1.root, tree2.root);
-		display(tree1.root);
 	}
 	static void display(TreeNode root){
 		if(root==null) return;
