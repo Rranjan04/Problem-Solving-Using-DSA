@@ -30,7 +30,7 @@ public class HasPath {
 	}
 	static boolean hasPathHelp(int[][] am, int src, int dest , boolean[] visited){
 		if(src>am.length||visited[src]) return false;
-		if(src==dest) return true;
+		if(src==dest||am[src][dest]==1) return true;
 		visited[src] = true;
 		for(int i=0;i<am.length;i++){
 			if(!visited[i] && am[src][i]!=0){
