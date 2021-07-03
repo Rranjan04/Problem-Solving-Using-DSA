@@ -13,7 +13,7 @@ public class KnightsTour {
 		}
 	}
 	static void knightsTour(int[][] chess,int r,int c, int move){
-		if(r<0||c<0||r==chess.length||c==chess[0].length||chess[r][c]!=0) return;
+		if(r<0||c<0||r>=chess.length||c>=chess[0].length||chess[r][c]!=0) return;
 		if(move==chess.length*chess.length){
 			chess[r][c] = move;
 			print(chess);
