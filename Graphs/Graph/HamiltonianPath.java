@@ -30,17 +30,25 @@ public class HamiltonianPath {
 			scn.close();
 			int src = 0;
 		 HashSet<Integer> visited = new HashSet<>();
-		 hamiltonian(graph,src,visited,src+" ");
+		 hamiltonian(graph,src,visited,src+" ",src);
 	 
 	}
-	 static void hamiltonian(ArrayList<Edge>[] graph, int src, HashSet<Integer> visited, String path){
+	 static void hamiltonian(ArrayList<Edge>[] graph, int src, HashSet<Integer> visited, String path,int osrc){
 		 visited.add(src);
 		if(visited.size()==graph.length){
-			System.out.println(path);
+			System.out.print(path);
+			for(Edge e:graph[src]){
+				if(e.n==osrc){
+					System.out.println("*");
+					return;
+				}
+			}
+			System.out.println(".");
+			return;
 		}
 		for(Edge e:graph[src]){
 			if(!visited.contains(e.n)){
-				hamiltonian(graph, e.n, visited, path+" "+e.n);
+				hamiltonian(graph, e.n, visited, path+" "+e.n,osrc);
 			}
 		}
 		visited.remove(src);
