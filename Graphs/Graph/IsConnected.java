@@ -23,7 +23,6 @@ public class IsConnected {
 				printDFS(am, visited, v);
 			}
 		}
-		// visited[i] = false;
 		
 	}
 }
