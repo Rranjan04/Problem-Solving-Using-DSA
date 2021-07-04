@@ -33,8 +33,8 @@ public class SpreadInfection {
 				break;
 			}
 			count++;
-			for (int v : graph[src]) {
-				if (v != 0 && visited[v] == 0) {
+			for (int v : graph[rem.v]) {
+				if (graph[rem.v][v]!=0  && visited[v] == 0) {
 					q.add(new Pair(v, rem.time + 1));
 				}
 			}
