@@ -25,7 +25,7 @@ public class IterativeDFS {
 			visited[rem] = true;
 			for (int v : graph[rem]) {
 				if (graph[rem][v] != 0 && !visited[v]) {
-					st.add(v);
+					st.push(v);
 				}
 			}
 		}
