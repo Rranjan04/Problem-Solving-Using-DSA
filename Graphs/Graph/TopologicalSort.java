@@ -15,6 +15,9 @@ public class TopologicalSort {
 				topologicalSort(graph,i,visited,stack);
 			}
 		}
+		while(!stack.isEmpty()){
+			System.out.println(stack.pop());
+		}
 	}
 	static void topologicalSort(int[][] graph, int src, boolean[] visited, Stack<Integer> stack){
 		visited[src] = true;
