@@ -22,7 +22,7 @@ public class TopologicalSort {
 	static void topologicalSort(int[][] graph, int src, boolean[] visited, Stack<Integer> stack){
 		visited[src] = true;
 		for(int v:graph[src]){
-			if(graph[src][v]!=0 && !visited[v]){
+			if(!visited[v]){
 				topologicalSort(graph, v, visited, stack);
 			}
 		}

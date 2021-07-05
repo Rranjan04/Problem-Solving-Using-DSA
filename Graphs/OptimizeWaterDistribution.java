@@ -1,7 +1,7 @@
 package Graphs;
 
 import java.util.PriorityQueue;
-
+// https://github.com/azl397985856/leetcode/blob/master/problems/1168.optimize-water-distribution-in-a-village-en.md
 public class OptimizeWaterDistribution {
 	public static void main(String[] args) {
 		// int n = 5;
