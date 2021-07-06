@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class AWalkToRemember {
+	//using kosaraju
 	public int[] walk(ArrayList<ArrayList<Integer>> graph,int v){
 		Stack<Integer> st = new Stack<>();
 		boolean[] visited = new boolean[v];
