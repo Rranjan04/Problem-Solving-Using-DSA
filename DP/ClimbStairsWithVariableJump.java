@@ -11,8 +11,8 @@ public class ClimbStairsWithVariableJump {
 		//3) Travel and Solve
 		dp[n] =1; 
 		for(int i =n-1;i>=0;i--){
-			int steps = dp[i];
-			for(int j=1;j<steps;j++){
+			int steps = arr[i];
+			for(int j=1;j<=steps;j++){
 				if(j+i<=n){
 					dp[i]+=dp[i+j];
 				}
