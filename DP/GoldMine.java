@@ -5,7 +5,7 @@ public class GoldMine {
 		
 	}
 	public static int findMax(int[][] mine){
-		int[][] dp = new int[mine.length+1][mine[0].length+1];
+		int[][] dp = new int[mine.length][mine[0].length];
 		for(int i=dp.length;i>=0;i--){
 			for(int j=dp[0].length;j>=0;j--){
 				if(j==dp[0].length){
