@@ -1,20 +1,20 @@
 package DP;
 
-public class CoinChange {
+public class CoinChangeII {
 	public static void main(String[] args) {
 		find(new int[]{2,3,5}, 7);
 	}
 	static int find(int[] coins, int target){
 		int[] dp = new int[target+1];
-		//traversing the dp array first creates permutation
-		for(int i=0;i<target+1;i++){
-			if(i==0){
-				dp[i] = 1;
-			}
-			else{
-				for(int j=0;j<coins.length;j++){
-					if(i-coins[j]>=0){
-						dp[i] += dp[i-coins[j]];
+		//traversing the coins array first creates combination
+		for(int i=0;i<coins.length;i++){
+			for(int j=0;j<target+1;j++){
+				if(j==0){
+					dp[j] = 1;
+				}
+				else{
+					if(j-coins[i]>=0){
+						dp[j]+= dp[j-coins[i]];
 					}
 				}
 			}
